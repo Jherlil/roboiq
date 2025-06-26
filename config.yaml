@@ -1,0 +1,75 @@
+# config.yaml
+
+account_type: "PRACTICE"
+email: "jherlilsales@gmail.com"
+password: "13031997"
+
+assets:
+  # Forex spots
+  - "EURUSD"
+  - "GBPUSD"
+  - "USDJPY"
+  - "AUDUSD"
+  - "AUDCAD"
+  - "EURGBP"
+  - "USDCHF"
+  - "NZDUSD"
+  - "EURJPY"
+  - "GBPJPY"
+  - "NZDCAD"
+  - "NZDJPY"
+
+  # Forex OTC
+  - "EURUSD-OTC"
+  - "GBPUSD-OTC"
+  - "USDJPY-OTC"
+  - "AUDUSD-OTC"
+  - "AUDCAD-OTC"
+  - "EURGBP-OTC"
+  - "USDCHF-OTC"
+  - "NZDUSD-OTC"
+  - "EURJPY-OTC"
+  - "GBPJPY-OTC"
+  - "NZDCAD-OTC"
+  - "NZDJPY-OTC"
+
+  # Cripto OTC
+  - "BTCUSD-OTC"
+  - "ETHUSD-OTC"
+  - "LTCUSD-OTC"
+  - "XRPUSD-OTC"
+  - "BCHUSD-OTC"
+  - "EOSUSD-OTC"
+  - "TRXUSD-OTC"
+  - "DASHUSD-OTC"
+  - "XMRUSD-OTC"
+
+loop_interval: 5
+trade_duration: 5
+
+timeframe_main: 300
+min_payout: 0.75
+max_payout: 0.95
+
+# 📉 Gestão de perdas
+stop_loss_amount: 1000        # Limite global em valor monetário
+stop_loss_consecutive: 10      # Para automaticamente após N perdas seguidas
+
+# 🏆 Gestão de ganho
+stop_win_amount: 10000         # Para automaticamente ao atingir lucro total
+stop_win_victories: 100        # Para automaticamente ao atingir N vitórias seguidas
+
+# 🎯 Estratégias
+strategy: "normal"             # normal | martingale | soros
+martingale_factor: 2           # Fator martingale
+soros_level: 3                 # Nível soros
+volume_period: 20
+trend_ma_fast: 20
+trend_ma_slow: 50
+news_buffer_minutes: 60
+
+# 🎯 Condições Avançadas
+use_martingale_if_high_chance: true   # Martingale só em sinais com altíssima probabilidade
+use_soros_if_low_payout: true         # Soros apenas se payout < 0.80 e sinal altíssima probabilidade
+min_payout_for_soros: 0.80            # Limite mínimo para soros
+breakout_lookback: 20
